@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "QuoteCore",
   "description": "",
-  "authors": [],
+  "authors": [
+    "KLONOA9X6"
+  ],
   "contact": {
     "repo": "https://github.com/KLONOA9X6/quotecore"
   },
@@ -13,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "net.quotecore.quotecore.client.QuoteCoreClient"
+      "net.quotecore.client.QuoteCoreClient"
     ],
     "main": [
-      "net.quotecore.quotecore.QuoteCore"
+      "net.quotecore.QuoteCore"
     ]
   },
   "mixins": [
@@ -25,6 +27,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "trinkets": ">=3.4.1"
   }
 }
