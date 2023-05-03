@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "quotecore",
+  "version": "${version}",
+  "name": "QuoteCore",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/KLONOA9X6/quotecore"
+  },
+  "license": "MIT",
+  "icon": "assets/quotecore/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.quotecore.quotecore.client.QuoteCoreClient"
+    ],
+    "main": [
+      "net.quotecore.quotecore.QuoteCore"
+    ]
+  },
+  "mixins": [
+    "quotecore.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
