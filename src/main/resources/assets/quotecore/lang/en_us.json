@@ -2,5 +2,8 @@
   "itemGroup.quotecore.group": "QuoteCore",
 
   "item.quotecore.soul_energy_exoskeleton": "Soul Energy Exoskeleton",
-  "item.quotecore.soul_energy_exoskeleton.tooltip": ""
+  "item.quotecore.soul_energy_exoskeleton.tooltip": "",
+
+  "quotecore.midnightconfig.title": "QuoteCore",
+  "quotecore.midnightconfig.SEExperienceCost": "SE Exoskeleton cost Exp. per second"
 }

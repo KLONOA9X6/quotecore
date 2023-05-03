@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.quotecore.QuoteCore;
+import net.quotecore.client.QuoteCoreClient;
 import net.quotecore.item.ItemList;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,7 +35,7 @@ public class SoulEnergyExoskeleton extends TrinketItem {
         // 消耗经验给予效果
         World world = playerEntity.world;
         boolean second = world.getTime() % 20 == 0;
-        boolean enough_experience = playerEntity.totalExperience >= 3 || playerEntity.experienceLevel > 0;
+        boolean enough_experience = playerEntity.totalExperience >= QuoteCoreClient.SEExperienceCost || playerEntity.experienceLevel > 0;
         boolean equipped = TrinketsApi.getTrinketComponent(playerEntity).get().isEquipped(ItemList.SOUL_ENERGY_EXOSKELETON);
         if (!equipped)
             return;
@@ -46,7 +47,7 @@ public class SoulEnergyExoskeleton extends TrinketItem {
         playerEntity.addStatusEffect(new StatusEffectInstance(HASTE, 30 ,3),playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(JUMP_BOOST, 30, 2),playerEntity);
         if (!playerEntity.isCreative()) {
-            playerEntity.addExperience(-3);
+            playerEntity.addExperience(-QuoteCoreClient.SEExperienceCost);
         }
     }
 }

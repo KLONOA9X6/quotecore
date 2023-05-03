@@ -2,5 +2,8 @@
   "itemGroup.quotecore.group": "QuoteCore",
 
   "item.quotecore.soul_energy_exoskeleton": "灵能外骨骼",
-  "item.quotecore.soul_energy_exoskeleton.tooltip": ""
+  "item.quotecore.soul_energy_exoskeleton.tooltip": "",
+
+  "quotecore.midnightconfig.title": "QuoteCore",
+  "quotecore.midnightconfig.SEExperienceCost": "灵能外骨骼每秒钟消耗的经验"
 }
