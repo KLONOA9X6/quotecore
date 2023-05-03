@@ -37,11 +37,7 @@ public class SoulEnergyExoskeleton extends TrinketItem {
         boolean second = world.getTime() % 20 == 0;
         boolean enough_experience = playerEntity.totalExperience >= QuoteCoreClient.SEExperienceCost || playerEntity.experienceLevel > 0;
         boolean equipped = TrinketsApi.getTrinketComponent(playerEntity).get().isEquipped(ItemList.SOUL_ENERGY_EXOSKELETON);
-        if (!equipped)
-            return;
-        if (!second)
-            return;
-        if (!enough_experience)
+        if (!equipped || !second || !enough_experience)
             return;
         playerEntity.addStatusEffect(new StatusEffectInstance(STRENGTH, 30 ,3),playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(HASTE, 30 ,3),playerEntity);

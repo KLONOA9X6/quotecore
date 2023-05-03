@@ -11,6 +11,7 @@ import net.quotecore.event.CommonEvent;
 import net.quotecore.init.ItemInit;
 import net.quotecore.integration.QuoteCoreConfig;
 import net.quotecore.item.ItemList;
+import net.quotecore.util.EventHandler;
 import org.slf4j.Logger;
 
 public class QuoteCore implements ModInitializer {
@@ -23,6 +24,7 @@ public class QuoteCore implements ModInitializer {
 
         ItemInit.registerItem();
         CommonEvent.registerEvent();
+        EventHandler.commonEvents();
         LOGGER.info("QuoteCore Initialized.");
     }
 }

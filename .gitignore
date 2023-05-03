@@ -43,3 +43,7 @@ config/
 crash-reports/
 logs/
 mods/
+data/
+saves/
+options.txt
+usercache.json
