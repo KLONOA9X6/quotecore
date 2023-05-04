@@ -43,7 +43,7 @@ public class SoulEnergyExoskeleton extends TrinketItem {
         super.appendTooltip(stack, world, tooltip, context);
         tooltip.add(Text.translatable(getTranslationKey() + ".tooltip").formatted(GRAY));
     }
-    
+
     public static boolean equipped(PlayerEntity playerEntity) { // 装备检测
         Optional<TrinketComponent> optional = TrinketsApi.getTrinketComponent(playerEntity);
         if (optional.isPresent()) {
@@ -61,8 +61,12 @@ public class SoulEnergyExoskeleton extends TrinketItem {
         // 消耗经验给予效果
         World world = playerEntity.world;
         boolean second = world.getTime() % 20 == 0;
-        if (!equipped(playerEntity) || !second || !enoughExperience(playerEntity))
+        if (!second || !equipped(playerEntity))
             return;
+        if (equipped(playerEntity) && !enoughExperience(playerEntity)) {
+            playerEntity.addStatusEffect(new StatusEffectInstance(SLOWNESS, 30, 0),playerEntity);
+            return;
+        }
         playerEntity.addStatusEffect(new StatusEffectInstance(STRENGTH, 30 ,3),playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(HASTE, 30 ,3),playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(JUMP_BOOST, 30, 2),playerEntity);
