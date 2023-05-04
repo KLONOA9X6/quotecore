@@ -32,6 +32,7 @@
     "fabric": "*",
     "minecraft": "${minecraft_version}",
     "trinkets": ">=3.4.1",
-    "midnightlib": ">=1.0.0"
+    "midnightlib": ">=1.0.0",
+    "geckolib3": ">=3.1.40"
   }
 }

@@ -45,5 +45,6 @@ logs/
 mods/
 data/
 saves/
+resourcepacks/
 options.txt
 usercache.json
