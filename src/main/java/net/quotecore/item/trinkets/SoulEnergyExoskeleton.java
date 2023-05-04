@@ -70,7 +70,7 @@ public class SoulEnergyExoskeleton extends TrinketItem {
 
     public static float hurt(DamageSource damageSource, LivingEntity entity, float v) { // 玩家受伤时减少经验
         if (entity instanceof PlayerEntity player && equipped(player) && enoughExperience(player)) {
-            int damageDecExp = Math.round(v);
+            int damageDecExp = Math.round(v) * 4;
             player.addExperience(-damageDecExp);
         }
         return v;
